@@ -1,23 +1,41 @@
+#include <iostream>
+#include <vector>
+#include <iomanip>
 
+using namespace std;
 
 int moda(vector<int> &lista);
-vector<int> leerConsole();
+vector<int> leerConsola();
 
 vector<int> leerConsola() {
-    //Ingrese un numero positivo, escriba -1 si ya no quiere ingresar mas numeros:
+    vector<int> valores;
+    int num;
+    while(true) {
+        cin >> num;
+        if(num != -1)
+            valores.push_back(num);
+        else
+            break;
+    }
+    return valores;
 }
 
 int moda(vector<int> &lista) {
-    /*
-    La moda es el elemento que mas se repite en la lista de elementos
-     */
-    return null;
+    vector <int> frecuencia;
+    while(true)
+        for(int i = 0; i < lista.size(); i++){
+        if (lista[i] == lista [i])
+            frecuencia.push_back(lista[i]);
+        else
+            break;
+      
+    }
+    return 0;
 }
-
 
 int main() {
     cout<<"Calcular la moda de los numeros ingresados:\n\n";
-    vector<int> leer_usuario = leerConsole();
+    vector<int> leer_usuario = leerConsola();
     int moda_elemento = moda(leer_usuario);
     cout<<"La moda es: "<<moda_elemento<<"\n";
 }
