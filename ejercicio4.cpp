@@ -1,20 +1,22 @@
-/*
-Escribir un programa que imprima lo siguiente:
+#include<iostream>
+using namespace std;
 
-12*****
-123****
-1234***
-12345**
-123456*
-1234567
+int main()
+{
+    int x,y;
+    for(x=1;x<=7;x++)
+    {
+        for(y=1;y<=x;y++)
+        {
+            cout<<y;
+        }
+        for(;y<=7;y++)
+        {
+            cout<<"*";
+        }
+        cout << endl;
 
-*/
+    }
 
-#include <iostream>
-using std::cout;
-
-int main() {
-
-
-    return 0;
+return 0;
 }
